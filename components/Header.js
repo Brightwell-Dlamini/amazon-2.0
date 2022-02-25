@@ -52,7 +52,7 @@ function Header() {
           All
         </p>
         <p className="link whitespace-nowrap">Prime Video</p>
-        <p className="link whitespace-nowrap">Todays's Deals</p>
+        <p className="link whitespace-nowrap">Todays&apos;s Deals</p>
         <p className="link whitespace-nowrap">Customer Service</p>
         <p className="link whitespace-nowrap">Registry</p>
         <p className="link whitespace-nowrap hidden md:inline-flex">
