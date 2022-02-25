@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        amazom_blue: { light: "#232F3E", DEFAULT: "#131921" },
+        amazon_blue: { light: "#232F3E", DEFAULT: "#131921" },
       },
     },
   },
