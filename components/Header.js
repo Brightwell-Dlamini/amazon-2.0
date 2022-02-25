@@ -1,7 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../public/images/Amazon logo.PNG";
-import { SearchIcon, ShoppingCartIcon } from "@heroicons/react/outline";
+import {
+  MenuIcon,
+  SearchIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/outline";
 
 function Header() {
   return (
@@ -41,6 +45,20 @@ function Header() {
             <p className="font-extrabold hidden md:inline-flex mt-2">Cart</p>
           </div>
         </div>
+      </div>
+      <div className="flex items-center bg-amazon_blue-light text-white text-sm space-x-3 p-2 pl-6 sm:pl-4">
+        <p className="font-bold link flex items-center">
+          <MenuIcon className="h-6 mr-1" />
+          All
+        </p>
+        <p className="link whitespace-nowrap">Prime Video</p>
+        <p className="link whitespace-nowrap">Todays's Deals</p>
+        <p className="link whitespace-nowrap">Customer Service</p>
+        <p className="link whitespace-nowrap">Registry</p>
+        <p className="link whitespace-nowrap hidden md:inline-flex">
+          Gift Cards
+        </p>
+        <p className="link whitespace-nowrap hidden md:inline-flex">Sell</p>
       </div>
     </header>
   );
