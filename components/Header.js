@@ -6,11 +6,13 @@ import {
   SearchIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 function Header() {
+  const { data: session } = useSession();
   return (
     <header>
-      <div className="flex items-center bg-amazon_blue flex-grow p-1 py-2 sm:flex-grow-0 justify-between">
+      <div className="flex items-center bg-amazon_blue flex-grow p-1 py-2 sm:flex-grow-0 justify-between ">
         <div className="mt-2 ">
           <Image
             src={logo}
@@ -29,8 +31,8 @@ function Header() {
           <SearchIcon className="h-12 p-4" />
         </div>
         <div className="flex items-center text-xs space-x-6 mx-6 whitespace-nowrap text-white">
-          <div className="link">
-            <p>Hello Gerv</p>
+          <div className="link" onClick={!session ? signIn : signOut}>
+            <p>{session ? `Hello, ${session.user.name}` : "Sign In"} </p>
             <p className="font-extrabold sm:text-sm">Account & List</p>
           </div>
           <div className="link">
